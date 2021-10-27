@@ -1,20 +1,8 @@
-const progressBar = document.querySelector(".page-progress");
+// Store progress bar in var
 
-const setProgress = () => {
-  // Cal max scroll height
-  const scrollHeight = document.body.scrollHeight;
-  const viewPortHeight = window.innerHeight;
-  const maxScrollHeight = scrollHeight - viewPortHeight;
+// Create function to set the progress of
+// progress bar
 
-  // Set percentage
-  const percentage = (window.scrollY / maxScrollHeight) * 100;
-  progressBar.style.width = `${percentage}%`;
-};
+// Call function on page scroll
 
-window.addEventListener("scroll", () => {
-  setProgress();
-});
-
-window.addEventListener("resize", () => {
-  setProgress();
-});
+// resolve resize break
